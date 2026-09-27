@@ -1,0 +1,6 @@
+{
+  "_comentario": "Datas ocupadas usadas se a sincronização iCal não estiver ativa. 'end' é o dia de saída (exclusivo). Atualize manualmente se precisar.",
+  "busy": [
+    { "start": "2026-01-01", "end": "2026-12-19", "source": "Spotahome / Uniplaces" }
+  ]
+}

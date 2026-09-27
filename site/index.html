@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ape Lisboa 72</title>
+<meta name="description" content="Apartamento T1 mobilado em Penha de França, Lisboa, em frente à Praça Paiva Couceiro. Reservas online de média duração.">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&family=Caveat:wght@600&display=swap">
+<style>
+:root{
+  --green:#16371c;      /* verde do logótipo */
+  --green-2:#2c5a35;
+  --gold:#e8a107;       /* dourado do coração */
+  --sage:#adb7a4;       /* parede verde-sálvia */
+  --sage-soft:#e7ece3;
+  --paper:#fbfaf6;
+  --card:#ffffff;
+  --ink:#16261b;
+  --muted:#5a6b5e;
+  --line:#d9ded4;
+  --booked:#e9e4da;
+  --booked-ink:#9a917f;
+  --on-green:#fbfaf6;
+  --focus:#e8a107;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Nunito Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --hand:"Caveat", "Segoe Print", cursive;
+  --r:14px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --green:#a9c9a8; --green-2:#8fb58f; --gold:#f0b43a; --sage:#6f8a72; --sage-soft:#1b2a1f;
+    --paper:#0f1a12; --card:#15231a; --ink:#e9eee6; --muted:#a3b3a5; --line:#2a3b2e;
+    --booked:#241f18; --booked-ink:#8a7f6c; --on-green:#0f1a12;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --green:#a9c9a8; --green-2:#8fb58f; --gold:#f0b43a; --sage:#6f8a72; --sage-soft:#1b2a1f;
+  --paper:#0f1a12; --card:#15231a; --ink:#e9eee6; --muted:#a3b3a5; --line:#2a3b2e;
+  --booked:#241f18; --booked-ink:#8a7f6c; --on-green:#0f1a12;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:var(--green)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
+h1,h2,h3{font-family:var(--serif);color:var(--green);line-height:1.12;text-wrap:balance;margin:0;font-weight:700}
+h2{font-size:clamp(1.9rem,3.6vw,2.6rem)}
+h3{font-size:1.25rem}
+p{margin:0}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:20px}
+.eyebrow{font-weight:800;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--green-2)}
+.divider{display:flex;align-items:center;gap:12px;color:var(--gold);max-width:260px}
+.divider::before,.divider::after{content:"";flex:1;height:2px;background:var(--gold);border-radius:2px}
+.divider svg{width:20px;height:20px;fill:var(--gold);flex:none}
+section{padding-block:clamp(56px,8vw,96px)}
+.sec-head{display:grid;gap:14px;margin-bottom:36px;max-width:680px}
+.sec-head p{color:var(--muted)}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:18px;min-height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--green)}
+.brand img{width:48px;height:48px;border-radius:50%;border:2px solid var(--green)}
+.brand b{font-family:var(--serif);font-size:1.3rem;line-height:1;white-space:nowrap}
+.brand small{display:block;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-top:3px}
+nav.links{display:flex;gap:22px;margin-left:auto}
+nav.links a{text-decoration:none;color:var(--ink);font-weight:600;font-size:.95rem}
+nav.links a:hover{color:var(--green-2)}
+.langs{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px;background:var(--card)}
+.langs button{border:0;background:none;color:var(--muted);font:800 .72rem var(--sans);letter-spacing:.06em;padding:6px 8px;border-radius:999px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--green);color:var(--on-green)}
+.btn{display:inline-flex;align-items:center;gap:10px;justify-content:center;border-radius:999px;padding:13px 22px;font:800 .95rem var(--sans);text-decoration:none;cursor:pointer;border:2px solid var(--green);transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.solid{background:var(--green);color:var(--on-green)}
+.btn.ghost{background:transparent;color:var(--green)}
+.btn svg{width:18px;height:18px}
+.top .btn{padding:9px 16px;font-size:.85rem}
+@media (max-width:900px){nav.links{display:none}.langs{margin-left:auto}.top .btn{display:none}}
+@media (max-width:420px){.brand small{display:none}.brand b{font-size:1.1rem}.brand img{width:40px;height:40px}.langs button{padding:6px 6px}}
+
+/* hero */
+.hero{padding-block:clamp(36px,6vw,72px) clamp(48px,7vw,88px)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4.1rem);letter-spacing:-.01em}
+.hero-copy{display:grid;gap:22px}
+.hero-copy .lead{font-size:1.14rem;color:var(--muted);max-width:52ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.arch{position:relative;border-radius:999px 999px var(--r) var(--r);overflow:hidden;border:6px solid var(--green);aspect-ratio:4/4.6;max-width:100%;background:var(--sage)}
+.arch img{width:100%;height:100%;object-fit:cover}
+.arch-wrap{position:relative;max-width:470px;justify-self:center;width:100%}
+.hand{position:absolute;left:-18px;bottom:-26px;background:var(--card);border:2px solid var(--green);border-radius:14px;padding:8px 16px;font:600 1.5rem/1.1 var(--hand);color:var(--green);transform:rotate(-4deg)}
+.hand small{display:block;font:800 .7rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px;padding:0;list-style:none}
+.facts li{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:7px 14px;font-weight:700;font-size:.9rem;color:var(--ink)}
+.facts li b{color:var(--green);font-variant-numeric:tabular-nums}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.arch-wrap{max-width:380px}.hand{left:0}}
+
+/* about */
+.about{background:var(--sage-soft)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px)}
+.story{display:grid;gap:18px;align-content:start}
+.story p{max-width:60ch}
+.story p:first-of-type::first-letter{font-family:var(--serif);font-weight:700;float:left;font-size:3.4em;line-height:.85;padding:6px 10px 0 0;color:var(--green)}
+.amen{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 26px;align-content:start}
+.amen li{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px dotted var(--sage)}
+.amen svg{width:24px;height:24px;flex:none;stroke:var(--green);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
+.amen li.sun svg{stroke:var(--gold)}
+@media (max-width:860px){.about .wrap{grid-template-columns:1fr}}
+@media (max-width:480px){.amen{grid-template-columns:1fr}}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:12px}
+.gallery button{padding:0;border:0;border-radius:var(--r);overflow:hidden;cursor:zoom-in;background:var(--sage)}
+.gallery button:first-child{grid-column:span 2;grid-row:span 2}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gallery button:hover img{transform:scale(1.04)}
+.gallery button{position:relative}
+.gallery .cap{position:absolute;left:10px;bottom:10px;background:color-mix(in srgb,var(--paper) 90%,transparent);color:var(--green);font-weight:800;font-size:.75rem;padding:4px 10px;border-radius:999px}
+.gallery.few{grid-template-columns:2fr 1fr;grid-auto-rows:240px}
+.gallery.few button:first-child{grid-column:auto}
+@media (max-width:760px){.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px}}
+.lightbox{position:fixed;inset:0;background:rgba(8,16,10,.92);z-index:50;display:grid;place-items:center;padding:24px}
+.lightbox img{max-height:80vh;border-radius:10px}
+.lightbox button{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;width:48px;height:48px;border-radius:50%;font-size:1.5rem;cursor:pointer}
+.lb-close{top:18px;right:18px}.lb-prev{left:14px;top:50%}.lb-next{right:14px;top:50%}
+
+/* video */
+.video-box{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--card)}
+.video-box video{width:100%;display:block;max-height:640px;background:#000}
+.video-box:has(video){max-width:360px;border:6px solid var(--green);border-radius:28px}
+.video-empty{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;padding:28px}
+.video-empty img{width:200px;border-radius:10px;border:1px solid var(--line)}
+.video-empty div{display:grid;gap:14px;justify-items:start}
+@media (max-width:620px){.video-empty{grid-template-columns:1fr}.video-empty img{width:100%}}
+
+.video-row{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,56px);align-items:center}
+.video-points{list-style:none;margin:0;padding:0;display:grid;gap:4px;max-width:360px}
+.video-points li{display:flex;gap:14px;align-items:center;padding:12px 0;border-bottom:1px dotted var(--sage);font-weight:700;font-family:var(--serif);font-size:1.15rem;color:var(--green)}
+.video-points svg{width:24px;height:24px;stroke:var(--green);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:620px){.video-row{grid-template-columns:1fr;justify-items:center}.video-points{display:none}}
+/* location */
+.loc .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,64px);align-items:start}
+.places{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:18px 0 0}
+.places li{background:var(--sage-soft);border-radius:999px;padding:6px 14px;font-weight:600;font-size:.92rem}
+.transit{display:grid;gap:14px}
+.tcard{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.tcard .num{font-family:var(--serif);font-weight:700;font-size:2.2rem;color:var(--green);line-height:1;font-variant-numeric:tabular-nums;min-width:74px}
+.tcard .num small{font-family:var(--sans);font-size:.8rem;font-weight:800;color:var(--muted);margin-left:2px}
+@media (max-width:860px){.loc .wrap{grid-template-columns:1fr}}
+
+/* booking */
+.booking{background:var(--green);color:var(--on-green)}
+.booking h2,.booking .eyebrow{color:var(--on-green)}
+.booking .sec-head p{color:color-mix(in srgb,var(--on-green) 78%,transparent)}
+.book-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:24px;align-items:start}
+.panel{background:var(--card);color:var(--ink);border-radius:18px;padding:clamp(18px,3vw,28px)}
+.cal-top{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.cal-top .nav{border:1px solid var(--line);background:var(--card);color:var(--ink);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1.1rem}
+.cal-top .nav:disabled{opacity:.35;cursor:default}
+.cal-top .sp{flex:1}
+.months{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media (max-width:640px){.months{grid-template-columns:1fr}.months .month:nth-child(2){display:none}}
+.month h3{font-size:1.1rem;text-align:center;margin-bottom:10px;text-transform:capitalize}
+.grid7{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.dow{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:center;padding:4px 0}
+.day{aspect-ratio:1;border:0;border-radius:9px;font:700 .9rem var(--sans);font-variant-numeric:tabular-nums;background:var(--sage-soft);color:var(--ink);cursor:pointer;position:relative}
+.day:hover:not(:disabled){outline:2px solid var(--green-2)}
+.day.empty{background:none;cursor:default}
+.day.past{background:none;color:var(--line);cursor:default}
+.day.booked{background:var(--booked);color:var(--booked-ink);text-decoration:line-through;cursor:not-allowed}
+.day.inrange{background:color-mix(in srgb,var(--gold) 30%,var(--card))}
+.day.sel{background:var(--green);color:var(--on-green)}
+.day.today::after{content:"";position:absolute;left:50%;bottom:5px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:var(--gold)}
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:16px;font-size:.85rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.legend i{width:14px;height:14px;border-radius:4px;display:inline-block}
+.sync{margin-top:12px;font-size:.82rem;color:var(--muted);display:flex;gap:8px;align-items:center}
+.sync .dot{width:8px;height:8px;border-radius:50%;background:#3c9a4f;flex:none}
+.sync.off .dot{background:var(--gold)}
+.summary{border:1px dashed var(--sage);border-radius:12px;padding:14px 16px;display:grid;gap:4px;margin-bottom:16px;font-size:.95rem}
+.summary .row{display:flex;justify-content:space-between;gap:12px}
+.summary b{font-variant-numeric:tabular-nums}
+.summary .hint{color:var(--muted)}
+.summary .warn{color:#b3261e;font-weight:700}
+form{display:grid;gap:12px}
+label{display:grid;gap:5px;font-weight:700;font-size:.85rem}
+input,select,textarea{font:500 1rem var(--sans);padding:11px 13px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);width:100%}
+textarea{min-height:88px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:420px){.two{grid-template-columns:1fr}}
+.form-msg{border-radius:10px;padding:12px 14px;font-size:.92rem;display:grid;gap:10px}
+.form-msg.ok{background:var(--sage-soft)}
+.form-msg pre{white-space:pre-wrap;font:500 .85rem var(--sans);margin:0;background:var(--paper);padding:10px;border-radius:8px;border:1px solid var(--line)}
+@media (max-width:900px){.book-grid{grid-template-columns:1fr}}
+.price{display:flex;align-items:baseline;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.price b{font-family:var(--serif);font-size:2rem;color:var(--green);font-variant-numeric:tabular-nums}
+.price span{color:var(--muted);font-size:.9rem}
+
+/* platforms + contact */
+.plats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.plat{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 24px;border:1px solid var(--line);border-radius:var(--r);background:var(--card);text-decoration:none;color:var(--ink)}
+.plat b{font-family:var(--serif);font-size:1.35rem;color:var(--green)}
+.plat span{color:var(--muted);font-size:.9rem;display:block}
+.plat svg{width:22px;height:22px;stroke:var(--green);fill:none;stroke-width:2;flex:none}
+.plat:hover{border-color:var(--green)}
+@media (max-width:620px){.plats{grid-template-columns:1fr}}
+.contact{background:var(--sage-soft)}
+.contact .wrap{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,60px);align-items:center}
+.contact .badge{width:220px;border-radius:50%;border:4px solid var(--green)}
+.contact .txt{display:grid;gap:16px;justify-items:start}
+.handle{font-family:var(--serif);font-weight:700;font-size:clamp(1.8rem,4vw,2.6rem);color:var(--green)}
+@media (max-width:620px){.contact .wrap{grid-template-columns:1fr;justify-items:center;text-align:center}.contact .txt{justify-items:center}.contact .badge{width:170px}}
+footer{padding-block:28px;font-size:.85rem;color:var(--muted);border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="heart" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 3 5 6.5 5c2.1 0 3.6 1.2 5.5 3.2C13.9 6.2 15.4 5 17.5 5 21 5 23.1 8.6 21.6 11.9 19.5 16.4 12 21 12 21z"/></symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18V7M21 18v-5a3 3 0 0 0-3-3H3M3 14h18M6.5 10.5a1.5 1.5 0 1 0 0-.01"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8M5 9.5V21h14V9.5M10 21v-6h4v6"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 2v20M3.3 7l17.4 10M3.3 17 20.7 7M9 4l3 2 3-2M9 20l3-2 3 2"/></symbol>
+  <symbol id="i-fork" viewBox="0 0 24 24"><path d="M7 2v9M4 2v5a3 3 0 0 0 6 0V2M7 11v11M17 22V2c-2.2 1.3-3.5 3.6-3.5 7v4H17"/></symbol>
+  <symbol id="i-wash" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="12" cy="13" r="5"/><path d="M8 5.5h.01M11 5.5h.01"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2 8.8a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M12 19.5h.01"/></symbol>
+  <symbol id="i-desk" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></symbol>
+  <symbol id="i-tv" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="13" rx="2"/><path d="M8 21h8M9 2l3 3 3-3"/></symbol>
+  <symbol id="i-sofa" viewBox="0 0 24 24"><path d="M4 11V8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v3M2 13a2 2 0 0 1 4 0v2h12v-2a2 2 0 0 1 4 0v5H2zM5 18v2M19 18v2"/></symbol>
+  <symbol id="i-oven" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 8h18M7 12h10v5H7zM7 5.5h.01M10 5.5h.01"/></symbol>
+  <symbol id="i-bills" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Ape Lisboa 72">
+      <img src="assets/img/logo.jpg" alt="" width="48" height="48">
+      <span><b>Ape Lisboa 72</b><small>Penha de França · Lisboa</small></span>
+    </a>
+    <nav class="links" aria-label="Menu">
+      <a href="#apartamento" data-i18n="nav_apt"></a>
+      <a href="#galeria" data-i18n="nav_gallery"></a>
+      <a href="#localizacao" data-i18n="nav_location"></a>
+      <a href="#contacto" data-i18n="nav_contact"></a>
+    </nav>
+    <div class="langs" role="group" aria-label="Idioma / Language" id="langs"></div>
+    <a class="btn solid" href="#reservas" data-i18n="cta_book"></a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow" data-i18n="hero_eyebrow"></span>
+        <h1 data-i18n="hero_title"></h1>
+        <div class="divider" aria-hidden="true"><svg><use href="#heart"/></svg></div>
+        <p class="lead" data-i18n="hero_lead"></p>
+        <ul class="facts">
+          <li><b>45 m²</b></li>
+          <li data-i18n="fact_type"></li>
+          <li data-i18n="fact_floor"></li>
+          <li data-i18n="fact_min"></li>
+          <li data-i18n="fact_bills"></li>
+        </ul>
+        <div class="ctas">
+          <a class="btn solid" href="#reservas"><span data-i18n="hero_cta_dates"></span><svg fill="none" stroke="currentColor" stroke-width="2"><use href="#i-arrow"/></svg></a>
+          <a class="btn ghost" href="https://www.instagram.com/ape.lisboa72" target="_blank" rel="noopener"><svg fill="none" stroke="currentColor" stroke-width="2"><use href="#i-insta"/></svg>@ape.lisboa72</a>
+        </div>
+      </div>
+      <div class="arch-wrap">
+        <div class="arch"><img src="assets/img/fotos/sala-04.jpg" alt="" data-i18n-alt="alt_living" width="900" height="1600"></div>
+        <div class="hand"><small>Short / mid term</small><span data-i18n="hand_note"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="apartamento">
+    <div class="wrap">
+      <div class="story">
+        <span class="eyebrow" data-i18n="apt_eyebrow"></span>
+        <h2 data-i18n="apt_title"></h2>
+        <p data-i18n="apt_p1"></p>
+        <p data-i18n="apt_p2"></p>
+        <p data-i18n="apt_p3"></p>
+      </div>
+      <div>
+        <h3 style="margin-bottom:8px" data-i18n="am_title"></h3>
+        <ul class="amen">
+          <li><svg><use href="#i-bed"/></svg><span data-i18n="am_bed"></span></li>
+          <li class="sun"><svg><use href="#i-sun"/></svg><span data-i18n="am_light"></span></li>
+          <li><svg><use href="#i-home"/></svg><span data-i18n="am_floor"></span></li>
+          <li><svg><use href="#i-sofa"/></svg><span data-i18n="am_sofa"></span></li>
+          <li><svg><use href="#i-desk"/></svg><span data-i18n="am_desk"></span></li>
+          <li><svg><use href="#i-snow"/></svg><span data-i18n="am_ac"></span></li>
+          <li><svg><use href="#i-oven"/></svg><span data-i18n="am_kitchen"></span></li>
+          <li><svg><use href="#i-fork"/></svg><span data-i18n="am_dish"></span></li>
+          <li><svg><use href="#i-wash"/></svg><span data-i18n="am_wash"></span></li>
+          <li><svg><use href="#i-tv"/></svg><span data-i18n="am_tv"></span></li>
+          <li><svg><use href="#i-wifi"/></svg><span data-i18n="am_wifi"></span></li>
+          <li><svg><use href="#i-bills"/></svg><span data-i18n="am_bills"></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow" data-i18n="gal_eyebrow"></span>
+        <h2 data-i18n="gal_title"></h2>
+      </div>
+      <div class="gallery" id="gallery"></div>
+      <div style="height:48px"></div>
+      <div class="sec-head" id="video">
+        <h2 data-i18n="vid_title"></h2>
+        <p data-i18n="vid_sub"></p>
+      </div>
+      <div class="video-row"><div class="video-box" id="videoBox"></div>
+        <ul class="video-points">
+          <li><svg><use href="#i-sofa"/></svg><span data-i18n="r_living"></span></li>
+          <li><svg><use href="#i-bed"/></svg><span data-i18n="r_bedroom"></span></li>
+          <li><svg><use href="#i-oven"/></svg><span data-i18n="r_kitchen"></span></li>
+          <li><svg><use href="#i-wash"/></svg><span data-i18n="r_laundry"></span></li>
+          <li><svg><use href="#i-home"/></svg><span data-i18n="r_bath"></span></li>
+        </ul></div>
+    </div>
+  </section>
+
+  <section class="loc" id="localizacao" style="padding-top:0">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow" data-i18n="loc_eyebrow"></span>
+        <h2 style="margin:12px 0 16px" data-i18n="loc_title"></h2>
+        <p style="color:var(--muted);max-width:56ch" data-i18n="loc_lead"></p>
+        <ul class="places">
+          <li>Praça Paiva Couceiro</li><li>Praça do Chile</li><li data-i18n="place_market"></li>
+          <li>Alameda</li><li>IST – Instituto Superior Técnico</li><li>Arco do Cego</li><li>Saldanha</li>
+        </ul>
+        <p style="margin-top:22px"><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Pra%C3%A7a+Paiva+Couceiro%2C+Lisboa" target="_blank" rel="noopener" data-i18n="loc_map"></a></p>
+      </div>
+      <div class="transit">
+        <div class="tcard"><div class="num">10<small>min</small></div><div><h3 data-i18n="loc_metro_t"></h3><p style="color:var(--muted)" data-i18n="loc_metro"></p></div></div>
+        <div class="tcard"><div class="num">1<small>min</small></div><div><h3 data-i18n="loc_bus_t"></h3><p style="color:var(--muted)" data-i18n="loc_bus"></p></div></div>
+        <div class="tcard"><div class="num" style="font-size:1.6rem">&#9733;</div><div><h3 data-i18n="loc_serv_t"></h3><p style="color:var(--muted)" data-i18n="loc_serv"></p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking" id="reservas">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow" data-i18n="bk_eyebrow"></span>
+        <h2 data-i18n="bk_title"></h2>
+        <p data-i18n="bk_lead"></p>
+      </div>
+      <div class="book-grid">
+        <div class="panel">
+          <div class="cal-top">
+            <button class="nav" id="prevM" type="button" data-i18n-aria="prev">&#8249;</button>
+            <button class="nav" id="nextM" type="button" data-i18n-aria="next">&#8250;</button>
+            <span class="sp"></span>
+            <button class="btn ghost" id="clearSel" type="button" style="padding:7px 14px;font-size:.8rem" data-i18n="clear"></button>
+          </div>
+          <div class="months" id="months"></div>
+          <div class="legend">
+            <span><i style="background:var(--sage-soft)"></i><span data-i18n="lg_free"></span></span>
+            <span><i style="background:var(--booked)"></i><span data-i18n="lg_booked"></span></span>
+            <span><i style="background:var(--green)"></i><span data-i18n="lg_sel"></span></span>
+          </div>
+          <div class="sync" id="sync"><span class="dot"></span><span id="syncTxt"></span></div>
+        </div>
+        <div class="panel">
+          <div class="price"><span data-i18n="from"></span><b id="priceTxt"></b><span data-i18n="per_month"></span></div>
+          <div class="summary" id="summary"></div>
+          <form id="bookForm" name="reserva" method="POST" data-netlify="true" netlify-honeypot="empresa" novalidate>
+            <input type="hidden" name="form-name" value="reserva">
+            <input type="hidden" name="checkin" id="fCheckin">
+            <input type="hidden" name="checkout" id="fCheckout">
+            <input type="hidden" name="idioma" id="fLang">
+            <p class="sr"><label>Empresa <input name="empresa" id="fHoney" tabindex="-1" autocomplete="off"></label></p>
+            <label for="fName"><span data-i18n="f_name"></span><input id="fName" name="nome" required autocomplete="name"></label>
+            <div class="two">
+              <label for="fEmail"><span data-i18n="f_email"></span><input id="fEmail" name="email" type="email" required autocomplete="email"></label>
+              <label for="fPhone"><span data-i18n="f_phone"></span><input id="fPhone" name="telefone" type="tel" autocomplete="tel"></label>
+            </div>
+            <label for="fGuests"><span data-i18n="f_guests"></span>
+              <select id="fGuests" name="hospedes"><option>1</option><option selected>2</option><option>3</option></select></label>
+            <label for="fMsg"><span data-i18n="f_msg"></span><textarea id="fMsg" name="mensagem"></textarea></label>
+            <button class="btn solid" type="submit" id="fSubmit" data-i18n="f_submit"></button>
+            <div id="formMsg" class="form-msg" hidden></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="plataformas">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow" data-i18n="plat_eyebrow"></span>
+        <h2 data-i18n="plat_title"></h2>
+        <p data-i18n="plat_sub"></p>
+      </div>
+      <div class="plats">
+        <a class="plat" href="https://www.uniplaces.com/accommodation/lisbon/552027" target="_blank" rel="noopener"><div><b>Uniplaces</b><span data-i18n="plat_uni"></span></div><svg><use href="#i-arrow"/></svg></a>
+        <a class="plat" href="https://www.spotahome.com/lisbon/for-rent:apartments/1307415" target="_blank" rel="noopener"><div><b>Spotahome</b><span data-i18n="plat_spot"></span></div><svg><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <div class="wrap">
+      <img class="badge" src="assets/img/logo.jpg" alt="Cozy Apartment to Rent — Penha de França, Lisbon" width="220" height="220">
+      <div class="txt">
+        <span class="eyebrow" data-i18n="ct_eyebrow"></span>
+        <span class="handle">@ape.lisboa72</span>
+        <p style="max-width:52ch" data-i18n="ct_lead"></p>
+        <a class="btn solid" href="https://www.instagram.com/ape.lisboa72?igsh=OGthbHliZXFsbDV6&amp;utm_source=qr" target="_blank" rel="noopener"><svg fill="none" stroke="currentColor" stroke-width="2"><use href="#i-insta"/></svg><span data-i18n="ct_btn"></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© <span id="yr"></span> Ape Lisboa 72 · Praça Paiva Couceiro, Penha de França, Lisboa</span><span data-i18n="foot"></span></div></footer>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true">
+  <figure style="margin:0;display:grid;gap:10px;justify-items:center"><img id="lbImg" alt=""><figcaption id="lbCap" style="color:#fff;font-weight:700"></figcaption></figure>
+  <button class="lb-close" id="lbClose" aria-label="×">&times;</button>
+  <button class="lb-prev" id="lbPrev" aria-label="‹">&#8249;</button>
+  <button class="lb-next" id="lbNext" aria-label="›">&#8250;</button>
+</div>
+
+<script>
+/* ===================== CONFIGURAÇÃO ===================== */
+const CONFIG = {
+  mode: "live",               // "live" no site publicado; "preview" na pré-visualização
+  monthlyPrice: 1500,              // € por mês (contas incluídas)
+  minNights: 30,                   // estadia mínima
+  maxGuests: 3,
+  instagram: "https://www.instagram.com/ape.lisboa72",
+  availabilityUrls: ["/api/availability", "availability.json"],
+  video: "assets/video/tour.mp4",  // coloque aqui o vídeo do apartamento
+  videoPoster: "assets/video/poster.jpg",
+  photos: [
+    { src: "assets/img/fotos/sala-01.jpg", room: "r_living" },
+    { src: "assets/img/fotos/sala-02.jpg", room: "r_living" },
+    { src: "assets/img/fotos/sala-03.jpg", room: "r_dining" },
+    { src: "assets/img/fotos/sala-04.jpg", room: "r_living" },
+    { src: "assets/img/fotos/sala-05.jpg", room: "r_sofa" },
+    { src: "assets/img/fotos/quarto-01.jpg", room: "r_bedroom" },
+    { src: "assets/img/fotos/quarto-02.jpg", room: "r_bedroom" },
+    { src: "assets/img/fotos/quarto-03.jpg", room: "r_wardrobe" },
+    { src: "assets/img/fotos/cozinha-01.jpg", room: "r_kitchen" },
+    { src: "assets/img/fotos/cozinha-02.jpg", room: "r_kitchen" },
+    { src: "assets/img/fotos/lavandaria-01.jpg", room: "r_laundry" },
+    { src: "assets/img/fotos/casa-de-banho-01.jpg", room: "r_bath" },
+    { src: "assets/img/fotos/casa-de-banho-02.jpg", room: "r_bath" }
+  ],
+  // Datas ocupadas usadas se a sincronização não responder (fim exclusivo = dia de saída)
+  fallbackBusy: [{ start: "2026-01-01", end: "2026-12-19", source: "Spotahome / Uniplaces" }]
+};
+
+/* ===================== TRADUÇÕES ===================== */
+const LANGS = [
+  { code: "pt-PT", label: "PT" }, { code: "pt-BR", label: "BR" },
+  { code: "en-GB", label: "EN" }, { code: "es", label: "ES" }, { code: "fr", label: "FR" }
+];
+const T = {
+"pt-PT": {
+  r_living:"Sala", r_dining:"Zona de refeições", r_sofa:"Sofá-cama na sala", r_bedroom:"Quarto de casal", r_wardrobe:"Roupeiro do quarto", r_kitchen:"Cozinha", r_laundry:"Lavandaria", r_bath:"Casa de banho",
+  nav_apt:"O apartamento", nav_gallery:"Fotos e vídeo", nav_location:"Localização", nav_contact:"Contacto", cta_book:"Reservar",
+  hero_eyebrow:"Penha de França · Lisboa", hero_title:"Um T1 acolhedor em frente à Praça Paiva Couceiro",
+  hero_lead:"Apartamento inteiro e totalmente mobilado, com muita luz natural, para estadias de curta e média duração no centro de Lisboa. Veja as datas livres e faça o seu pedido de reserva aqui.",
+  fact_type:"T1 · 1 quarto de casal", fact_floor:"Rés-do-chão", fact_min:"Mínimo 1 mês", fact_bills:"Contas incluídas",
+  hero_cta_dates:"Ver datas disponíveis", hand_note:"Casa pronta a habitar", alt_living:"Sala com parede verde-sálvia, candeeiros de cobre e estante em madeira",
+  apt_eyebrow:"O apartamento", apt_title:"45 m² pensados para viver Lisboa como um local",
+  apt_p1:"Em plena Penha de França, com vista para a Praça Paiva Couceiro, este T1 é uma base tranquila num dos bairros mais autênticos de Lisboa. Três janelas enchem a casa de luz ao longo do dia.",
+  apt_p2:"O quarto de casal tem roupeiro e janela própria. A sala, com duas janelas voltadas para a praça, tem sofá-cama para um hóspede extra e uma secretária extensível para um dia inteiro de trabalho remoto.",
+  apt_p3:"A cozinha está totalmente equipada, com forno, micro-ondas, máquina de lavar loiça e frigorífico. Há máquina de lavar roupa, ar condicionado com aquecimento, Smart TV e Wi-Fi rápido. É só trazer a mala.",
+  am_title:"Tudo incluído", am_bed:"Quarto de casal com roupeiro", am_light:"Muita luz natural", am_floor:"Rés-do-chão, sem escadas",
+  am_sofa:"Sofá-cama na sala", am_desk:"Secretária extensível para trabalhar", am_ac:"Ar condicionado e aquecimento",
+  am_kitchen:"Forno, micro-ondas e frigorífico", am_dish:"Máquina de lavar loiça", am_wash:"Máquina de lavar roupa",
+  am_tv:"Smart TV", am_wifi:"Wi-Fi de alta velocidade", am_bills:"Água, luz e internet incluídas",
+  gal_eyebrow:"Galeria", gal_title:"Espreite cada divisão",
+  vid_title:"Visita em vídeo", vid_sub:"Percorra o apartamento antes de reservar.",
+  vid_missing:"Os vídeos do apartamento estão publicados no nosso Instagram.", vid_btn:"Ver vídeos no Instagram",
+  loc_eyebrow:"Localização", loc_title:"Entre Arroios e Alameda, tudo a pé",
+  loc_lead:"Fica em Penha de França, mesmo em frente à Praça Paiva Couceiro, perto de universidades, mercados e das principais ligações de transportes.",
+  place_market:"Mercado de Arroios", loc_map:"Abrir no Google Maps",
+  loc_metro_t:"Metro Arroios ou Alameda", loc_metro:"Linhas verde e vermelha a 10 minutos a pé.",
+  loc_bus_t:"Paragem de autocarro", loc_bus:"À porta do prédio, a 1 minuto.",
+  loc_serv_t:"Serviços à volta", loc_serv:"Supermercados, cafés, farmácias e comércio local no quarteirão.",
+  bk_eyebrow:"Reservas online", bk_title:"Escolha as datas", bk_lead:"O calendário é sincronizado com os anúncios na Uniplaces e na Spotahome. Clique no dia de entrada e depois no dia de saída.",
+  prev:"Mês anterior", next:"Mês seguinte", clear:"Limpar", lg_free:"Disponível", lg_booked:"Ocupado", lg_sel:"A sua estadia",
+  sync_live:"Sincronizado com Uniplaces e Spotahome · atualizado {t}", sync_off:"Disponibilidade publicada nos anúncios · confirmamos por mensagem",
+  from:"Desde", per_month:"/ mês, contas incluídas",
+  s_pick_in:"Selecione o dia de entrada no calendário.", s_pick_out:"Agora selecione o dia de saída.",
+  s_in:"Entrada", s_out:"Saída", s_nights:"Noites", s_est:"Estimativa",
+  s_min:"A estadia mínima é de {n} noites.", s_conflict:"Há dias ocupados entre as datas escolhidas.",
+  f_name:"Nome completo", f_email:"E-mail", f_phone:"Telemóvel / WhatsApp", f_guests:"Hóspedes", f_msg:"Mensagem (opcional)",
+  f_submit:"Enviar pedido de reserva", f_need_dates:"Escolha datas válidas no calendário antes de enviar.", f_need_fields:"Preencha o nome e um e-mail válido.",
+  f_ok:"Pedido enviado. Respondemos em até 24 horas com a confirmação e os próximos passos.",
+  f_err:"Não foi possível enviar agora. Envie-nos esta mensagem pelo Instagram:",
+  f_preview:"Pré-visualização: o pedido não foi enviado. No site publicado, chega diretamente ao seu e-mail. Mensagem gerada:",
+  copy:"Copiar mensagem", copied:"Copiado", open_ig:"Abrir Instagram",
+  plat_eyebrow:"Também nas plataformas", plat_title:"Prefere reservar por uma plataforma?", plat_sub:"O mesmo apartamento está anunciado na Uniplaces e na Spotahome, com o calendário sincronizado.",
+  plat_uni:"Ver anúncio na Uniplaces", plat_spot:"Ver anúncio na Spotahome",
+  ct_eyebrow:"Contacto", ct_lead:"Veja mais fotos, vídeos e novidades no Instagram e fale connosco por mensagem direta. Respondemos em português, inglês, espanhol e francês.", ct_btn:"Seguir no Instagram",
+  foot:"Apartamento para arrendar em Lisboa", msg_intro:"Olá! Gostaria de reservar o apartamento Ape Lisboa 72."
+},
+"pt-BR": {
+  r_living:"Sala", r_dining:"Mesa de jantar", r_sofa:"Sofá-cama na sala", r_bedroom:"Quarto de casal", r_wardrobe:"Guarda-roupa do quarto", r_kitchen:"Cozinha", r_laundry:"Lavanderia", r_bath:"Banheiro",
+  nav_apt:"O apartamento", nav_gallery:"Fotos e vídeo", nav_location:"Localização", nav_contact:"Contato", cta_book:"Reservar",
+  hero_eyebrow:"Penha de França · Lisboa", hero_title:"Um apê aconchegante de 1 quarto em frente à Praça Paiva Couceiro",
+  hero_lead:"Apartamento inteiro e todo mobiliado, com muita luz natural, para temporadas curtas e médias no centro de Lisboa. Confira as datas livres e faça seu pedido de reserva aqui.",
+  fact_type:"1 quarto de casal", fact_floor:"Térreo", fact_min:"Mínimo 1 mês", fact_bills:"Contas incluídas",
+  hero_cta_dates:"Ver datas disponíveis", hand_note:"Pronto para morar", alt_living:"Sala com parede verde-sálvia, luminárias de cobre e estante de madeira",
+  apt_eyebrow:"O apartamento", apt_title:"45 m² pensados para você viver Lisboa como um morador",
+  apt_p1:"No coração da Penha de França, com vista para a Praça Paiva Couceiro, este apartamento é uma base tranquila em um dos bairros mais autênticos de Lisboa. Três janelas deixam a casa iluminada o dia todo.",
+  apt_p2:"O quarto de casal tem guarda-roupa e janela própria. A sala, com duas janelas de frente para a praça, tem sofá-cama para um hóspede extra e uma escrivaninha extensível para um dia inteiro de home office.",
+  apt_p3:"A cozinha é completa, com forno, micro-ondas, lava-louças e geladeira. Tem máquina de lavar roupa, ar-condicionado quente e frio, Smart TV e Wi-Fi rápido. É só chegar com a mala.",
+  am_title:"Tudo incluído", am_bed:"Quarto de casal com guarda-roupa", am_light:"Muita luz natural", am_floor:"Térreo, sem escadas",
+  am_sofa:"Sofá-cama na sala", am_desk:"Escrivaninha extensível para trabalhar", am_ac:"Ar-condicionado quente e frio",
+  am_kitchen:"Forno, micro-ondas e geladeira", am_dish:"Lava-louças", am_wash:"Máquina de lavar roupa",
+  am_tv:"Smart TV", am_wifi:"Wi-Fi de alta velocidade", am_bills:"Água, luz e internet incluídas",
+  gal_eyebrow:"Galeria", gal_title:"Dê uma olhada em cada cômodo",
+  vid_title:"Tour em vídeo", vid_sub:"Conheça o apartamento antes de reservar.",
+  vid_missing:"Os vídeos do apartamento estão no nosso Instagram.", vid_btn:"Ver vídeos no Instagram",
+  loc_eyebrow:"Localização", loc_title:"Entre Arroios e Alameda, tudo a pé",
+  loc_lead:"Fica na Penha de França, bem em frente à Praça Paiva Couceiro, perto de universidades, mercados e das principais linhas de transporte.",
+  place_market:"Mercado de Arroios", loc_map:"Abrir no Google Maps",
+  loc_metro_t:"Metrô Arroios ou Alameda", loc_metro:"Linhas verde e vermelha a 10 minutos a pé.",
+  loc_bus_t:"Ponto de ônibus", loc_bus:"Na porta do prédio, a 1 minuto.",
+  loc_serv_t:"Serviços por perto", loc_serv:"Supermercados, cafés, farmácias e comércio local no quarteirão.",
+  bk_eyebrow:"Reservas online", bk_title:"Escolha as datas", bk_lead:"O calendário é sincronizado com os anúncios na Uniplaces e na Spotahome. Clique no dia de entrada e depois no dia de saída.",
+  prev:"Mês anterior", next:"Próximo mês", clear:"Limpar", lg_free:"Disponível", lg_booked:"Ocupado", lg_sel:"Sua estadia",
+  sync_live:"Sincronizado com Uniplaces e Spotahome · atualizado {t}", sync_off:"Disponibilidade publicada nos anúncios · confirmamos por mensagem",
+  from:"A partir de", per_month:"/ mês, contas incluídas",
+  s_pick_in:"Selecione o dia de entrada no calendário.", s_pick_out:"Agora selecione o dia de saída.",
+  s_in:"Entrada", s_out:"Saída", s_nights:"Noites", s_est:"Estimativa",
+  s_min:"A estadia mínima é de {n} noites.", s_conflict:"Há dias ocupados entre as datas escolhidas.",
+  f_name:"Nome completo", f_email:"E-mail", f_phone:"Celular / WhatsApp", f_guests:"Hóspedes", f_msg:"Mensagem (opcional)",
+  f_submit:"Enviar pedido de reserva", f_need_dates:"Escolha datas válidas no calendário antes de enviar.", f_need_fields:"Preencha o nome e um e-mail válido.",
+  f_ok:"Pedido enviado. Respondemos em até 24 horas com a confirmação e os próximos passos.",
+  f_err:"Não foi possível enviar agora. Mande esta mensagem pelo Instagram:",
+  f_preview:"Pré-visualização: o pedido não foi enviado. No site publicado, ele chega direto no seu e-mail. Mensagem gerada:",
+  copy:"Copiar mensagem", copied:"Copiado", open_ig:"Abrir Instagram",
+  plat_eyebrow:"Também nas plataformas", plat_title:"Prefere reservar por uma plataforma?", plat_sub:"O mesmo apartamento está anunciado na Uniplaces e na Spotahome, com o calendário sincronizado.",
+  plat_uni:"Ver anúncio na Uniplaces", plat_spot:"Ver anúncio na Spotahome",
+  ct_eyebrow:"Contato", ct_lead:"Veja mais fotos, vídeos e novidades no Instagram e fale com a gente por mensagem direta. Respondemos em português, inglês, espanhol e francês.", ct_btn:"Seguir no Instagram",
+  foot:"Apartamento para alugar em Lisboa", msg_intro:"Olá! Gostaria de reservar o apartamento Ape Lisboa 72."
+},
+"en-GB": {
+  r_living:"Living room", r_dining:"Dining area", r_sofa:"Sofa bed in the living room", r_bedroom:"Double bedroom", r_wardrobe:"Bedroom wardrobe", r_kitchen:"Kitchen", r_laundry:"Laundry", r_bath:"Bathroom",
+  nav_apt:"The flat", nav_gallery:"Photos & video", nav_location:"Location", nav_contact:"Contact", cta_book:"Book",
+  hero_eyebrow:"Penha de França · Lisbon", hero_title:"A cosy one-bedroom flat facing Praça Paiva Couceiro",
+  hero_lead:"An entire, fully furnished flat with lots of natural light, for short and mid-term stays in central Lisbon. Check the free dates and send your booking request right here.",
+  fact_type:"1 double bedroom", fact_floor:"Ground floor", fact_min:"1-month minimum", fact_bills:"Bills included",
+  hero_cta_dates:"See available dates", hand_note:"Ready to move in", alt_living:"Living room with a sage-green wall, copper pendant lights and a wooden bookcase",
+  apt_eyebrow:"The flat", apt_title:"45 m² made for living Lisbon like a local",
+  apt_p1:"Right in Penha de França, overlooking Praça Paiva Couceiro, this one-bedroom flat is a calm base in one of Lisbon's most genuine neighbourhoods. Three windows fill it with daylight from morning to evening.",
+  apt_p2:"The double bedroom has a wardrobe and its own window. The living room, with two windows facing the square, has a sofa bed for an extra guest and an extendable desk for a full day of remote work.",
+  apt_p3:"The kitchen is fully equipped with an oven, microwave, dishwasher and fridge. There is a washing machine, air conditioning with heating, a smart TV and fast Wi-Fi. Just bring your suitcase.",
+  am_title:"Everything included", am_bed:"Double bedroom with wardrobe", am_light:"Lots of natural light", am_floor:"Ground floor, no stairs",
+  am_sofa:"Sofa bed in the living room", am_desk:"Extendable desk for working", am_ac:"Air conditioning and heating",
+  am_kitchen:"Oven, microwave and fridge", am_dish:"Dishwasher", am_wash:"Washing machine",
+  am_tv:"Smart TV", am_wifi:"High-speed Wi-Fi", am_bills:"Water, electricity and internet included",
+  gal_eyebrow:"Gallery", gal_title:"Take a look around",
+  vid_title:"Video tour", vid_sub:"Walk through the flat before you book.",
+  vid_missing:"Our video tours are posted on Instagram.", vid_btn:"Watch on Instagram",
+  loc_eyebrow:"Location", loc_title:"Between Arroios and Alameda, all on foot",
+  loc_lead:"In Penha de França, right in front of Praça Paiva Couceiro, close to universities, markets and Lisbon's main transport links.",
+  place_market:"Arroios Market", loc_map:"Open in Google Maps",
+  loc_metro_t:"Arroios or Alameda Metro", loc_metro:"Green and red lines, a 10-minute walk.",
+  loc_bus_t:"Bus stop", loc_bus:"Right outside the building, 1 minute away.",
+  loc_serv_t:"Everyday services", loc_serv:"Supermarkets, cafés, pharmacies and local shops around the block.",
+  bk_eyebrow:"Online booking", bk_title:"Choose your dates", bk_lead:"This calendar is synced with our Uniplaces and Spotahome listings. Click your check-in day, then your check-out day.",
+  prev:"Previous month", next:"Next month", clear:"Clear", lg_free:"Available", lg_booked:"Booked", lg_sel:"Your stay",
+  sync_live:"Synced with Uniplaces and Spotahome · updated {t}", sync_off:"Availability as published on our listings · we confirm by message",
+  from:"From", per_month:"/ month, bills included",
+  s_pick_in:"Select your check-in day on the calendar.", s_pick_out:"Now select your check-out day.",
+  s_in:"Check-in", s_out:"Check-out", s_nights:"Nights", s_est:"Estimate",
+  s_min:"The minimum stay is {n} nights.", s_conflict:"Some days between your dates are already booked.",
+  f_name:"Full name", f_email:"Email", f_phone:"Mobile / WhatsApp", f_guests:"Guests", f_msg:"Message (optional)",
+  f_submit:"Send booking request", f_need_dates:"Pick valid dates on the calendar before sending.", f_need_fields:"Please enter your name and a valid email.",
+  f_ok:"Request sent. We reply within 24 hours with confirmation and next steps.",
+  f_err:"We couldn't send it right now. Please send us this message on Instagram:",
+  f_preview:"Preview: this request was not sent. On the live site it goes straight to your inbox. Generated message:",
+  copy:"Copy message", copied:"Copied", open_ig:"Open Instagram",
+  plat_eyebrow:"Also listed on", plat_title:"Prefer to book through a platform?", plat_sub:"The same flat is listed on Uniplaces and Spotahome, with a synced calendar.",
+  plat_uni:"View the Uniplaces listing", plat_spot:"View the Spotahome listing",
+  ct_eyebrow:"Contact", ct_lead:"See more photos, videos and updates on Instagram, and message us directly. We reply in Portuguese, English, Spanish and French.", ct_btn:"Follow on Instagram",
+  foot:"Flat to rent in Lisbon", msg_intro:"Hello! I'd like to book the Ape Lisboa 72 flat."
+},
+"es": {
+  r_living:"Salón", r_dining:"Comedor", r_sofa:"Sofá cama en el salón", r_bedroom:"Dormitorio doble", r_wardrobe:"Armario del dormitorio", r_kitchen:"Cocina", r_laundry:"Lavadero", r_bath:"Baño",
+  nav_apt:"El apartamento", nav_gallery:"Fotos y vídeo", nav_location:"Ubicación", nav_contact:"Contacto", cta_book:"Reservar",
+  hero_eyebrow:"Penha de França · Lisboa", hero_title:"Un acogedor apartamento de un dormitorio frente a la Praça Paiva Couceiro",
+  hero_lead:"Apartamento entero y totalmente amueblado, con mucha luz natural, para estancias cortas y medias en el centro de Lisboa. Consulta las fechas libres y envía tu solicitud de reserva aquí.",
+  fact_type:"1 dormitorio doble", fact_floor:"Planta baja", fact_min:"Mínimo 1 mes", fact_bills:"Gastos incluidos",
+  hero_cta_dates:"Ver fechas disponibles", hand_note:"Listo para entrar a vivir", alt_living:"Salón con pared verde salvia, lámparas de cobre y estantería de madera",
+  apt_eyebrow:"El apartamento", apt_title:"45 m² pensados para vivir Lisboa como un local",
+  apt_p1:"En plena Penha de França, con vistas a la Praça Paiva Couceiro, este apartamento es una base tranquila en uno de los barrios más auténticos de Lisboa. Tres ventanas lo llenan de luz durante todo el día.",
+  apt_p2:"El dormitorio doble tiene armario y ventana propia. El salón, con dos ventanas que dan a la plaza, tiene sofá cama para un huésped más y un escritorio extensible para una jornada completa de teletrabajo.",
+  apt_p3:"La cocina está totalmente equipada con horno, microondas, lavavajillas y frigorífico. Hay lavadora, aire acondicionado con calefacción, Smart TV y wifi rápido. Solo tienes que traer la maleta.",
+  am_title:"Todo incluido", am_bed:"Dormitorio doble con armario", am_light:"Mucha luz natural", am_floor:"Planta baja, sin escaleras",
+  am_sofa:"Sofá cama en el salón", am_desk:"Escritorio extensible para trabajar", am_ac:"Aire acondicionado y calefacción",
+  am_kitchen:"Horno, microondas y frigorífico", am_dish:"Lavavajillas", am_wash:"Lavadora",
+  am_tv:"Smart TV", am_wifi:"Wifi de alta velocidad", am_bills:"Agua, luz e internet incluidos",
+  gal_eyebrow:"Galería", gal_title:"Echa un vistazo a cada rincón",
+  vid_title:"Visita en vídeo", vid_sub:"Recorre el apartamento antes de reservar.",
+  vid_missing:"Los vídeos del apartamento están en nuestro Instagram.", vid_btn:"Ver vídeos en Instagram",
+  loc_eyebrow:"Ubicación", loc_title:"Entre Arroios y Alameda, todo a pie",
+  loc_lead:"Está en Penha de França, justo enfrente de la Praça Paiva Couceiro, cerca de universidades, mercados y de las principales conexiones de transporte.",
+  place_market:"Mercado de Arroios", loc_map:"Abrir en Google Maps",
+  loc_metro_t:"Metro Arroios o Alameda", loc_metro:"Líneas verde y roja a 10 minutos a pie.",
+  loc_bus_t:"Parada de autobús", loc_bus:"En la puerta del edificio, a 1 minuto.",
+  loc_serv_t:"Servicios cerca", loc_serv:"Supermercados, cafeterías, farmacias y comercio local en la misma manzana.",
+  bk_eyebrow:"Reservas online", bk_title:"Elige tus fechas", bk_lead:"El calendario está sincronizado con los anuncios de Uniplaces y Spotahome. Pulsa el día de entrada y luego el de salida.",
+  prev:"Mes anterior", next:"Mes siguiente", clear:"Borrar", lg_free:"Disponible", lg_booked:"Ocupado", lg_sel:"Tu estancia",
+  sync_live:"Sincronizado con Uniplaces y Spotahome · actualizado {t}", sync_off:"Disponibilidad publicada en los anuncios · confirmamos por mensaje",
+  from:"Desde", per_month:"/ mes, gastos incluidos",
+  s_pick_in:"Selecciona el día de entrada en el calendario.", s_pick_out:"Ahora selecciona el día de salida.",
+  s_in:"Entrada", s_out:"Salida", s_nights:"Noches", s_est:"Estimación",
+  s_min:"La estancia mínima es de {n} noches.", s_conflict:"Hay días ocupados entre las fechas elegidas.",
+  f_name:"Nombre completo", f_email:"Correo electrónico", f_phone:"Móvil / WhatsApp", f_guests:"Huéspedes", f_msg:"Mensaje (opcional)",
+  f_submit:"Enviar solicitud de reserva", f_need_dates:"Elige fechas válidas en el calendario antes de enviar.", f_need_fields:"Escribe tu nombre y un correo válido.",
+  f_ok:"Solicitud enviada. Respondemos en menos de 24 horas con la confirmación y los siguientes pasos.",
+  f_err:"No se ha podido enviar ahora. Envíanos este mensaje por Instagram:",
+  f_preview:"Vista previa: la solicitud no se ha enviado. En el sitio publicado llega directamente a tu correo. Mensaje generado:",
+  copy:"Copiar mensaje", copied:"Copiado", open_ig:"Abrir Instagram",
+  plat_eyebrow:"También en plataformas", plat_title:"¿Prefieres reservar por una plataforma?", plat_sub:"El mismo apartamento está anunciado en Uniplaces y Spotahome, con el calendario sincronizado.",
+  plat_uni:"Ver anuncio en Uniplaces", plat_spot:"Ver anuncio en Spotahome",
+  ct_eyebrow:"Contacto", ct_lead:"Mira más fotos, vídeos y novedades en Instagram y escríbenos por mensaje directo. Respondemos en portugués, inglés, español y francés.", ct_btn:"Seguir en Instagram",
+  foot:"Apartamento en alquiler en Lisboa", msg_intro:"¡Hola! Me gustaría reservar el apartamento Ape Lisboa 72."
+},
+"fr": {
+  r_living:"Séjour", r_dining:"Coin repas", r_sofa:"Canapé-lit du séjour", r_bedroom:"Chambre double", r_wardrobe:"Armoire de la chambre", r_kitchen:"Cuisine", r_laundry:"Buanderie", r_bath:"Salle de bains",
+  nav_apt:"L'appartement", nav_gallery:"Photos et vidéo", nav_location:"Quartier", nav_contact:"Contact", cta_book:"Réserver",
+  hero_eyebrow:"Penha de França · Lisbonne", hero_title:"Un T2 chaleureux face à la Praça Paiva Couceiro",
+  hero_lead:"Appartement entier et entièrement meublé, très lumineux, pour des séjours de courte et moyenne durée au centre de Lisbonne. Consultez les dates libres et envoyez votre demande de réservation ici.",
+  fact_type:"1 chambre double", fact_floor:"Rez-de-chaussée", fact_min:"1 mois minimum", fact_bills:"Charges comprises",
+  hero_cta_dates:"Voir les disponibilités", hand_note:"Prêt à vivre", alt_living:"Séjour avec mur vert sauge, suspensions en cuivre et bibliothèque en bois",
+  apt_eyebrow:"L'appartement", apt_title:"45 m² pour vivre Lisbonne comme un habitant",
+  apt_p1:"Au cœur de Penha de França, avec vue sur la Praça Paiva Couceiro, cet appartement est un point de chute paisible dans l'un des quartiers les plus authentiques de Lisbonne. Trois fenêtres le baignent de lumière toute la journée.",
+  apt_p2:"La chambre double dispose d'une armoire et de sa propre fenêtre. Le séjour, avec deux fenêtres donnant sur la place, offre un canapé-lit pour un invité supplémentaire et un bureau extensible pour une journée entière de télétravail.",
+  apt_p3:"La cuisine est entièrement équipée : four, micro-ondes, lave-vaisselle et réfrigérateur. Lave-linge, climatisation réversible, Smart TV et Wi-Fi rapide complètent l'ensemble. Il ne reste qu'à poser la valise.",
+  am_title:"Tout est inclus", am_bed:"Chambre double avec armoire", am_light:"Très lumineux", am_floor:"Rez-de-chaussée, sans escalier",
+  am_sofa:"Canapé-lit dans le séjour", am_desk:"Bureau extensible pour travailler", am_ac:"Climatisation et chauffage",
+  am_kitchen:"Four, micro-ondes et réfrigérateur", am_dish:"Lave-vaisselle", am_wash:"Lave-linge",
+  am_tv:"Smart TV", am_wifi:"Wi-Fi haut débit", am_bills:"Eau, électricité et internet compris",
+  gal_eyebrow:"Galerie", gal_title:"Faites le tour des pièces",
+  vid_title:"Visite en vidéo", vid_sub:"Parcourez l'appartement avant de réserver.",
+  vid_missing:"Les vidéos de l'appartement sont publiées sur notre Instagram.", vid_btn:"Voir les vidéos sur Instagram",
+  loc_eyebrow:"Quartier", loc_title:"Entre Arroios et Alameda, tout à pied",
+  loc_lead:"À Penha de França, juste en face de la Praça Paiva Couceiro, près des universités, des marchés et des principaux transports de Lisbonne.",
+  place_market:"Marché d'Arroios", loc_map:"Ouvrir dans Google Maps",
+  loc_metro_t:"Métro Arroios ou Alameda", loc_metro:"Lignes verte et rouge à 10 minutes à pied.",
+  loc_bus_t:"Arrêt de bus", loc_bus:"Devant l'immeuble, à 1 minute.",
+  loc_serv_t:"Commerces à proximité", loc_serv:"Supermarchés, cafés, pharmacies et commerces de quartier autour du pâté de maisons.",
+  bk_eyebrow:"Réservation en ligne", bk_title:"Choisissez vos dates", bk_lead:"Le calendrier est synchronisé avec nos annonces Uniplaces et Spotahome. Cliquez sur le jour d'arrivée, puis sur le jour de départ.",
+  prev:"Mois précédent", next:"Mois suivant", clear:"Effacer", lg_free:"Disponible", lg_booked:"Réservé", lg_sel:"Votre séjour",
+  sync_live:"Synchronisé avec Uniplaces et Spotahome · mis à jour {t}", sync_off:"Disponibilités publiées sur nos annonces · confirmation par message",
+  from:"À partir de", per_month:"/ mois, charges comprises",
+  s_pick_in:"Sélectionnez votre jour d'arrivée sur le calendrier.", s_pick_out:"Sélectionnez maintenant votre jour de départ.",
+  s_in:"Arrivée", s_out:"Départ", s_nights:"Nuits", s_est:"Estimation",
+  s_min:"Le séjour minimum est de {n} nuits.", s_conflict:"Certains jours entre vos dates sont déjà réservés.",
+  f_name:"Nom complet", f_email:"E-mail", f_phone:"Portable / WhatsApp", f_guests:"Voyageurs", f_msg:"Message (facultatif)",
+  f_submit:"Envoyer la demande", f_need_dates:"Choisissez des dates valides sur le calendrier avant d'envoyer.", f_need_fields:"Indiquez votre nom et un e-mail valide.",
+  f_ok:"Demande envoyée. Nous répondons sous 24 heures avec la confirmation et les prochaines étapes.",
+  f_err:"L'envoi a échoué. Envoyez-nous ce message sur Instagram :",
+  f_preview:"Aperçu : la demande n'a pas été envoyée. Sur le site publié, elle arrive directement dans votre boîte mail. Message généré :",
+  copy:"Copier le message", copied:"Copié", open_ig:"Ouvrir Instagram",
+  plat_eyebrow:"Aussi sur les plateformes", plat_title:"Vous préférez réserver via une plateforme ?", plat_sub:"Le même appartement est proposé sur Uniplaces et Spotahome, avec un calendrier synchronisé.",
+  plat_uni:"Voir l'annonce Uniplaces", plat_spot:"Voir l'annonce Spotahome",
+  ct_eyebrow:"Contact", ct_lead:"Retrouvez plus de photos, vidéos et nouvelles sur Instagram et écrivez-nous en message privé. Nous répondons en portugais, anglais, espagnol et français.", ct_btn:"Suivre sur Instagram",
+  foot:"Appartement à louer à Lisbonne", msg_intro:"Bonjour ! Je souhaite réserver l'appartement Ape Lisboa 72."
+}};
+
+/* ===================== ESTADO ===================== */
+let lang = pickLang();
+let busy = CONFIG.fallbackBusy.map(r => ({ ...r }));
+let syncInfo = null;          // {updatedAt}
+let viewMonth = firstOfMonth(new Date());
+let sel = { in: null, out: null };
+let lbIndex = 0; let photos = [];
+
+function pickLang(){
+  try { const s = localStorage.getItem("apeLang"); if (s && T[s]) return s; } catch(e){}
+  const n = (navigator.language || "pt-PT").toLowerCase();
+  if (n === "pt-br") return "pt-BR";
+  if (n.startsWith("pt")) return "pt-PT";
+  if (n.startsWith("es")) return "es";
+  if (n.startsWith("fr")) return "fr";
+  if (n.startsWith("en")) return "en-GB";
+  return "pt-PT";
+}
+const t = (k, v={}) => (T[lang][k] ?? T["pt-PT"][k] ?? k).replace(/\{(\w+)\}/g, (_, x) => v[x] ?? "");
+
+/* ===================== DATAS ===================== */
+function ymd(d){ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+function parse(s){ const [y,m,d] = s.split("-").map(Number); return new Date(y, m-1, d); }
+function firstOfMonth(d){ return new Date(d.getFullYear(), d.getMonth(), 1); }
+function addDays(d,n){ const x = new Date(d); x.setDate(x.getDate()+n); return x; }
+function nightsBetween(a,b){ return Math.round((parse(b)-parse(a))/86400000); }
+const todayStr = ymd(new Date());
+function isBusy(s){ return busy.some(r => s >= r.start && s < r.end); }
+function rangeFree(a,b){ for (let d = parse(a); ymd(d) < b; d = addDays(d,1)) if (isBusy(ymd(d))) return false; return true; }
+function fmt(s, opts={day:"numeric",month:"short",year:"numeric"}){ return parse(s).toLocaleDateString(lang, opts); }
+const money = n => new Intl.NumberFormat(lang, {style:"currency",currency:"EUR",maximumFractionDigits:0}).format(n);
+
+/* ===================== I18N ===================== */
+function applyLang(){
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el => el.textContent = t(el.dataset.i18n));
+  document.querySelectorAll("[data-i18n-alt]").forEach(el => el.alt = t(el.dataset.i18nAlt));
+  document.querySelectorAll("[data-i18n-aria]").forEach(el => el.setAttribute("aria-label", t(el.dataset.i18nAria)));
+  document.querySelectorAll("#langs button").forEach(b => b.setAttribute("aria-pressed", b.dataset.code === lang));
+  document.getElementById("priceTxt").textContent = money(CONFIG.monthlyPrice);
+  document.getElementById("fLang").value = lang;
+  renderCal(); renderSummary(); renderSync(); renderVideo();
+  document.querySelectorAll("#gallery img").forEach(im => { if (im.dataset.room){ im.alt = t(im.dataset.room); im.nextSibling.textContent = im.alt; im.parentNode.setAttribute("aria-label", im.alt); } });
+}
+function buildLangs(){
+  const box = document.getElementById("langs");
+  LANGS.forEach(l => {
+    const b = document.createElement("button");
+    b.type = "button"; b.textContent = l.label; b.dataset.code = l.code;
+    b.title = {"pt-PT":"Português (Portugal)","pt-BR":"Português (Brasil)","en-GB":"English (UK)","es":"Español","fr":"Français"}[l.code];
+    b.onclick = () => { lang = l.code; try{ localStorage.setItem("apeLang", lang); }catch(e){} applyLang(); };
+    box.appendChild(b);
+  });
+}
+
+/* ===================== CALENDÁRIO ===================== */
+function renderCal(){
+  const wrap = document.getElementById("months"); wrap.innerHTML = "";
+  const minMonth = firstOfMonth(new Date());
+  document.getElementById("prevM").disabled = viewMonth <= minMonth;
+  for (let i = 0; i < 2; i++){
+    const m = new Date(viewMonth.getFullYear(), viewMonth.getMonth()+i, 1);
+    const box = document.createElement("div"); box.className = "month";
+    const h = document.createElement("h3"); h.textContent = m.toLocaleDateString(lang,{month:"long",year:"numeric"}); box.appendChild(h);
+    const g = document.createElement("div"); g.className = "grid7";
+    // cabeçalho (segunda-feira primeiro)
+    for (let k = 0; k < 7; k++){ const d = new Date(2024,0,1+k); const s = document.createElement("div"); s.className="dow"; s.textContent = d.toLocaleDateString(lang,{weekday:"short"}).replace(".","").slice(0,3); g.appendChild(s); }
+    const offset = (m.getDay()+6)%7;
+    for (let k = 0; k < offset; k++){ const e = document.createElement("span"); e.className="day empty"; g.appendChild(e); }
+    const days = new Date(m.getFullYear(), m.getMonth()+1, 0).getDate();
+    for (let d = 1; d <= days; d++){
+      const ds = ymd(new Date(m.getFullYear(), m.getMonth(), d));
+      const b = document.createElement("button"); b.type="button"; b.className="day"; b.textContent = d; b.dataset.d = ds;
+      const past = ds < todayStr, bz = isBusy(ds);
+      if (past){ b.classList.add("past"); b.disabled = true; }
+      else if (bz && !(sel.in && !sel.out && ds > sel.in && rangeFree(sel.in, ds))){ b.classList.add("booked"); b.disabled = true; }
+      if (ds === todayStr) b.classList.add("today");
+      if (ds === sel.in || ds === sel.out) b.classList.add("sel");
+      else if (sel.in && sel.out && ds > sel.in && ds < sel.out) b.classList.add("inrange");
+      b.setAttribute("aria-label", fmt(ds,{weekday:"long",day:"numeric",month:"long",year:"numeric"}) + (bz ? " – "+t("lg_booked") : ""));
+      b.onclick = () => pickDay(ds);
+      g.appendChild(b);
+    }
+    box.appendChild(g); wrap.appendChild(box);
+  }
+}
+function pickDay(ds){
+  if (!sel.in || sel.out || ds <= sel.in){ if (isBusy(ds)) return; sel = { in: ds, out: null }; }
+  else { sel.out = ds; }
+  renderCal(); renderSummary();
+}
+function selectionState(){
+  if (!sel.in) return {ok:false, msg:t("s_pick_in")};
+  if (!sel.out) return {ok:false, msg:t("s_pick_out")};
+  const n = nightsBetween(sel.in, sel.out);
+  if (!rangeFree(sel.in, sel.out)) return {ok:false, n, warn:t("s_conflict")};
+  if (n < CONFIG.minNights) return {ok:false, n, warn:t("s_min",{n:CONFIG.minNights})};
+  return {ok:true, n};
+}
+function renderSummary(){
+  const s = selectionState(), box = document.getElementById("summary");
+  let html = "";
+  if (sel.in) html += `<div class="row"><span>${t("s_in")}</span><b>${fmt(sel.in)}</b></div>`;
+  if (sel.out) html += `<div class="row"><span>${t("s_out")}</span><b>${fmt(sel.out)}</b></div>`;
+  if (s.n != null) html += `<div class="row"><span>${t("s_nights")}</span><b>${s.n}</b></div>`;
+  if (s.ok) html += `<div class="row"><span>${t("s_est")}</span><b>${money(Math.round(CONFIG.monthlyPrice*s.n/30))}</b></div>`;
+  if (s.msg) html += `<div class="hint">${s.msg}</div>`;
+  if (s.warn) html += `<div class="warn">${s.warn}</div>`;
+  box.innerHTML = html;
+  document.getElementById("fCheckin").value = s.ok ? sel.in : "";
+  document.getElementById("fCheckout").value = s.ok ? sel.out : "";
+}
+function renderSync(){
+  const el = document.getElementById("sync"), tx = document.getElementById("syncTxt");
+  if (syncInfo){ el.classList.remove("off"); tx.textContent = t("sync_live",{t:new Date(syncInfo.updatedAt).toLocaleString(lang,{dateStyle:"short",timeStyle:"short"})}); }
+  else { el.classList.add("off"); tx.textContent = t("sync_off"); }
+}
+async function loadAvailability(){
+  if (CONFIG.mode !== "live") return;
+  for (const url of CONFIG.availabilityUrls){
+    try {
+      const r = await fetch(url, {cache:"no-store"}); if (!r.ok) continue;
+      const j = await r.json(); if (!Array.isArray(j.busy)) continue;
+      busy = j.busy; syncInfo = j.updatedAt ? {updatedAt:j.updatedAt} : null;
+      jumpToFirstFree(); renderCal(); renderSummary(); renderSync(); return;
+    } catch(e){}
+  }
+}
+function jumpToFirstFree(){
+  let d = new Date(); for (let i=0;i<540;i++){ if (!isBusy(ymd(d))) break; d = addDays(d,1); }
+  viewMonth = firstOfMonth(d);
+}
+
+/* ===================== FORMULÁRIO ===================== */
+function bookingText(){
+  const f = id => document.getElementById(id).value.trim();
+  return [t("msg_intro"),
+    `${t("s_in")}: ${fmt(sel.in)} → ${t("s_out")}: ${fmt(sel.out)} (${nightsBetween(sel.in,sel.out)} ${t("s_nights").toLowerCase()})`,
+    `${t("f_guests")}: ${f("fGuests")}`, `${t("f_name")}: ${f("fName")}`, `${t("f_email")}: ${f("fEmail")}`,
+    f("fPhone") ? `${t("f_phone")}: ${f("fPhone")}` : "", f("fMsg")].filter(Boolean).join("\n");
+}
+function showMsg(kind, text, withCopy){
+  const m = document.getElementById("formMsg"); m.hidden = false; m.className = "form-msg " + (kind==="ok"?"ok":"");
+  m.innerHTML = ""; const p = document.createElement("p"); p.textContent = text; m.appendChild(p);
+  if (withCopy){
+    const pre = document.createElement("pre"); pre.textContent = bookingText(); m.appendChild(pre);
+    const row = document.createElement("div"); row.className="ctas";
+    const c = document.createElement("button"); c.type="button"; c.className="btn ghost"; c.style.padding="8px 14px"; c.textContent = t("copy");
+    c.onclick = () => { navigator.clipboard?.writeText(pre.textContent).then(()=>c.textContent=t("copied")).catch(()=>{ const r=document.createRange(); r.selectNodeContents(pre); const s=getSelection(); s.removeAllRanges(); s.addRange(r); }); };
+    const a = document.createElement("a"); a.className="btn solid"; a.style.padding="8px 14px"; a.href = CONFIG.instagram; a.target="_blank"; a.rel="noopener"; a.textContent = t("open_ig");
+    row.append(c,a); m.appendChild(row);
+  }
+}
+document.getElementById("bookForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  const s = selectionState();
+  if (!s.ok){ showMsg("err", t("f_need_dates")); return; }
+  const name = document.getElementById("fName").value.trim(), mail = document.getElementById("fEmail");
+  if (!name || !mail.checkValidity() || !mail.value){ showMsg("err", t("f_need_fields")); return; }
+  if (CONFIG.mode !== "live"){ showMsg("ok", t("f_preview"), true); return; }
+  const btn = document.getElementById("fSubmit"); btn.disabled = true;
+  try {
+    const body = new URLSearchParams(new FormData(e.target)).toString();
+    const r = await fetch("/", {method:"POST", headers:{"Content-Type":"application/x-www-form-urlencoded"}, body});
+    if (!r.ok) throw new Error(r.status);
+    showMsg("ok", t("f_ok"));
+  } catch(err){ showMsg("err", t("f_err"), true); }
+  btn.disabled = false;
+});
+
+/* ===================== GALERIA E VÍDEO ===================== */
+function buildGallery(){
+  const g = document.getElementById("gallery");
+  g.innerHTML = "";
+  CONFIG.photos.forEach(ph => {
+    const src = ph.src || ph;
+    const b = document.createElement("button"); b.type="button";
+    const img = new Image(); img.loading="lazy"; img.dataset.room = ph.room || ""; img.alt = ph.room ? t(ph.room) : ""; img.src = src;
+    const cap = document.createElement("span"); cap.className = "cap"; cap.textContent = img.alt; b.append(img, cap); b.setAttribute("aria-label", img.alt);
+    img.onerror = () => { b.remove(); photos = [...g.querySelectorAll("img")].map(i=>i.src); g.classList.toggle("few", g.children.length < 5); };
+    g.appendChild(b);
+    b.onclick = () => { photos = [...g.querySelectorAll("img")].map(i=>i.src); openLb(photos.indexOf(img.src)); };
+  });
+}
+function openLb(i){ lbIndex = (i+photos.length)%photos.length; const im = document.getElementById("lbImg"); im.src = photos[lbIndex]; const src = document.querySelector(`#gallery img[src="${photos[lbIndex]}"]`); im.alt = src ? src.alt : ""; document.getElementById("lbCap").textContent = im.alt; document.getElementById("lightbox").hidden = false; document.getElementById("lbClose").focus(); }
+function closeLb(){ document.getElementById("lightbox").hidden = true; }
+document.getElementById("lbClose").onclick = closeLb;
+document.getElementById("lbPrev").onclick = () => openLb(lbIndex-1);
+document.getElementById("lbNext").onclick = () => openLb(lbIndex+1);
+document.getElementById("lightbox").addEventListener("click", e => { if (e.target.id==="lightbox") closeLb(); });
+addEventListener("keydown", e => { if (document.getElementById("lightbox").hidden) return; if (e.key==="Escape") closeLb(); if (e.key==="ArrowLeft") openLb(lbIndex-1); if (e.key==="ArrowRight") openLb(lbIndex+1); });
+
+let videoOk = !!CONFIG.video;
+function renderVideo(){
+  const box = document.getElementById("videoBox");
+  if (videoOk){
+    if (!box.querySelector("video")){
+      box.innerHTML = "";
+      const v = document.createElement("video"); v.controls = true; v.preload = "metadata"; v.playsInline = true; v.poster = CONFIG.videoPoster; v.src = CONFIG.video;
+      v.onerror = () => { videoOk = false; renderVideo(); };
+      box.appendChild(v);
+    }
+    return;
+  }
+  box.innerHTML = `<div class="video-empty"><img src="${CONFIG.videoPoster}" alt=""><div><h3>${t("vid_missing")}</h3><a class="btn solid" href="${CONFIG.instagram}" target="_blank" rel="noopener">${t("vid_btn")}</a></div></div>`;
+}
+
+/* ===================== INÍCIO ===================== */
+document.getElementById("prevM").onclick = () => { viewMonth = new Date(viewMonth.getFullYear(), viewMonth.getMonth()-1, 1); renderCal(); };
+document.getElementById("nextM").onclick = () => { viewMonth = new Date(viewMonth.getFullYear(), viewMonth.getMonth()+1, 1); renderCal(); };
+document.getElementById("clearSel").onclick = () => { sel = {in:null,out:null}; renderCal(); renderSummary(); };
+document.getElementById("yr").textContent = new Date().getFullYear();
+buildLangs(); jumpToFirstFree(); applyLang(); buildGallery(); loadAvailability();
+</script>
+
+</body>
+</html>
