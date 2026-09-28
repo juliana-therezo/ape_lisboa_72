@@ -113,7 +113,6 @@ nav.links a:hover{color:var(--green-2)}
 .amen{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 26px;align-content:start}
 .amen li{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px dotted var(--sage)}
 .amen svg{width:24px;height:24px;flex:none;stroke:var(--green);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
-.amen li.sun svg{stroke:var(--gold)}
 @media (max-width:860px){.about .wrap{grid-template-columns:1fr}}
 @media (max-width:480px){.amen{grid-template-columns:1fr}}
 
@@ -274,8 +273,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
           <li><b>45 m²</b></li>
           <li data-i18n="fact_type"></li>
           <li data-i18n="fact_floor"></li>
-          <li data-i18n="fact_min"></li>
-          <li data-i18n="fact_bills"></li>
+          <li data-i18n="fact_ac"></li>
         </ul>
         <div class="ctas">
           <a class="btn solid" href="#reservas"><span data-i18n="hero_cta_dates"></span><svg fill="none" stroke="currentColor" stroke-width="2"><use href="#i-arrow"/></svg></a>
@@ -312,7 +310,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
           <li><svg><use href="#i-wash"/></svg><span data-i18n="am_wash"></span></li>
           <li><svg><use href="#i-tv"/></svg><span data-i18n="am_tv"></span></li>
           <li><svg><use href="#i-wifi"/></svg><span data-i18n="am_wifi"></span></li>
-          <li><svg><use href="#i-bills"/></svg><span data-i18n="am_bills"></span></li>
         </ul>
       </div>
     </div>
@@ -486,16 +483,16 @@ const T = {
   nav_apt:"O apartamento", nav_gallery:"Fotos e vídeo", nav_location:"Localização", nav_contact:"Contacto", cta_book:"Reservar",
   hero_eyebrow:"Penha de França · Lisboa", hero_title:"Um T1 acolhedor em frente à Praça Paiva Couceiro",
   hero_lead:"Apartamento inteiro e totalmente mobilado, com muita luz natural, para estadias de curta e média duração no centro de Lisboa. Veja as datas livres e faça o seu pedido de reserva aqui.",
-  fact_type:"T1 · 1 quarto de casal", fact_floor:"Rés-do-chão", fact_min:"Mínimo 1 mês", fact_bills:"Contas incluídas",
+  fact_type:"T1 · 1 quarto de casal", fact_floor:"Rés-do-chão", fact_ac:"Ar condicionado / aquecimento",
   hero_cta_dates:"Ver datas disponíveis", hand_note:"Casa pronta a habitar", alt_living:"Sala com parede verde-sálvia, candeeiros de cobre e estante em madeira",
   apt_eyebrow:"O apartamento", apt_title:"45 m² pensados para viver Lisboa como um local",
   apt_p1:"Em plena Penha de França, com vista para a Praça Paiva Couceiro, este T1 é uma base tranquila num dos bairros mais autênticos de Lisboa. Três janelas enchem a casa de luz ao longo do dia.",
   apt_p2:"O quarto de casal tem roupeiro e janela própria. A sala, com duas janelas voltadas para a praça, tem sofá-cama para um hóspede extra e uma secretária extensível para um dia inteiro de trabalho remoto.",
   apt_p3:"A cozinha está totalmente equipada, com forno, micro-ondas, máquina de lavar loiça e frigorífico. Há máquina de lavar roupa, ar condicionado com aquecimento, Smart TV e Wi-Fi rápido. É só trazer a mala.",
-  am_title:"Tudo incluído", am_bed:"Quarto de casal com roupeiro", am_light:"Muita luz natural", am_floor:"Rés-do-chão, sem escadas",
+  am_title:"O que o apartamento oferece", am_bed:"Quarto de casal com roupeiro", am_light:"Muita luz natural", am_floor:"Rés-do-chão, sem escadas",
   am_sofa:"Sofá-cama na sala", am_desk:"Secretária extensível para trabalhar", am_ac:"Ar condicionado e aquecimento",
   am_kitchen:"Forno, micro-ondas e frigorífico", am_dish:"Máquina de lavar loiça", am_wash:"Máquina de lavar roupa",
-  am_tv:"Smart TV", am_wifi:"Wi-Fi de alta velocidade", am_bills:"Água, luz e internet incluídas",
+  am_tv:"Smart TV", am_wifi:"Wi-Fi de alta velocidade",
   gal_eyebrow:"Galeria", gal_title:"Espreite cada divisão",
   vid_title:"Visita em vídeo", vid_sub:"Percorra o apartamento antes de reservar.",
   vid_missing:"Os vídeos do apartamento estão publicados no nosso Instagram.", vid_btn:"Ver vídeos no Instagram",
@@ -508,7 +505,7 @@ const T = {
   bk_eyebrow:"Reservas online", bk_title:"Escolha as datas", bk_lead:"O calendário é sincronizado com os anúncios na Uniplaces e na Spotahome. Clique no dia de entrada e depois no dia de saída.",
   prev:"Mês anterior", next:"Mês seguinte", clear:"Limpar", lg_free:"Disponível", lg_booked:"Ocupado", lg_sel:"A sua estadia",
   sync_live:"Sincronizado com Uniplaces e Spotahome · atualizado {t}", sync_off:"Disponibilidade publicada nos anúncios · confirmamos por mensagem",
-  from:"Desde", per_month:"/ mês, contas incluídas",
+  from:"Desde", per_month:"/ mês",
   s_pick_in:"Selecione o dia de entrada no calendário.", s_pick_out:"Agora selecione o dia de saída.",
   s_in:"Entrada", s_out:"Saída", s_nights:"Noites", s_est:"Estimativa",
   s_min:"A estadia mínima é de {n} noites.", s_conflict:"Há dias ocupados entre as datas escolhidas.",
@@ -528,16 +525,16 @@ const T = {
   nav_apt:"O apartamento", nav_gallery:"Fotos e vídeo", nav_location:"Localização", nav_contact:"Contato", cta_book:"Reservar",
   hero_eyebrow:"Penha de França · Lisboa", hero_title:"Um apê aconchegante de 1 quarto em frente à Praça Paiva Couceiro",
   hero_lead:"Apartamento inteiro e todo mobiliado, com muita luz natural, para temporadas curtas e médias no centro de Lisboa. Confira as datas livres e faça seu pedido de reserva aqui.",
-  fact_type:"1 quarto de casal", fact_floor:"Térreo", fact_min:"Mínimo 1 mês", fact_bills:"Contas incluídas",
+  fact_type:"1 quarto de casal", fact_floor:"Térreo", fact_ac:"Ar-condicionado / aquecimento",
   hero_cta_dates:"Ver datas disponíveis", hand_note:"Pronto para morar", alt_living:"Sala com parede verde-sálvia, luminárias de cobre e estante de madeira",
   apt_eyebrow:"O apartamento", apt_title:"45 m² pensados para você viver Lisboa como um morador",
   apt_p1:"No coração da Penha de França, com vista para a Praça Paiva Couceiro, este apartamento é uma base tranquila em um dos bairros mais autênticos de Lisboa. Três janelas deixam a casa iluminada o dia todo.",
   apt_p2:"O quarto de casal tem guarda-roupa e janela própria. A sala, com duas janelas de frente para a praça, tem sofá-cama para um hóspede extra e uma escrivaninha extensível para um dia inteiro de home office.",
   apt_p3:"A cozinha é completa, com forno, micro-ondas, lava-louças e geladeira. Tem máquina de lavar roupa, ar-condicionado quente e frio, Smart TV e Wi-Fi rápido. É só chegar com a mala.",
-  am_title:"Tudo incluído", am_bed:"Quarto de casal com guarda-roupa", am_light:"Muita luz natural", am_floor:"Térreo, sem escadas",
+  am_title:"O que o apartamento oferece", am_bed:"Quarto de casal com guarda-roupa", am_light:"Muita luz natural", am_floor:"Térreo, sem escadas",
   am_sofa:"Sofá-cama na sala", am_desk:"Escrivaninha extensível para trabalhar", am_ac:"Ar-condicionado quente e frio",
   am_kitchen:"Forno, micro-ondas e geladeira", am_dish:"Lava-louças", am_wash:"Máquina de lavar roupa",
-  am_tv:"Smart TV", am_wifi:"Wi-Fi de alta velocidade", am_bills:"Água, luz e internet incluídas",
+  am_tv:"Smart TV", am_wifi:"Wi-Fi de alta velocidade",
   gal_eyebrow:"Galeria", gal_title:"Dê uma olhada em cada cômodo",
   vid_title:"Tour em vídeo", vid_sub:"Conheça o apartamento antes de reservar.",
   vid_missing:"Os vídeos do apartamento estão no nosso Instagram.", vid_btn:"Ver vídeos no Instagram",
@@ -550,7 +547,7 @@ const T = {
   bk_eyebrow:"Reservas online", bk_title:"Escolha as datas", bk_lead:"O calendário é sincronizado com os anúncios na Uniplaces e na Spotahome. Clique no dia de entrada e depois no dia de saída.",
   prev:"Mês anterior", next:"Próximo mês", clear:"Limpar", lg_free:"Disponível", lg_booked:"Ocupado", lg_sel:"Sua estadia",
   sync_live:"Sincronizado com Uniplaces e Spotahome · atualizado {t}", sync_off:"Disponibilidade publicada nos anúncios · confirmamos por mensagem",
-  from:"A partir de", per_month:"/ mês, contas incluídas",
+  from:"A partir de", per_month:"/ mês",
   s_pick_in:"Selecione o dia de entrada no calendário.", s_pick_out:"Agora selecione o dia de saída.",
   s_in:"Entrada", s_out:"Saída", s_nights:"Noites", s_est:"Estimativa",
   s_min:"A estadia mínima é de {n} noites.", s_conflict:"Há dias ocupados entre as datas escolhidas.",
@@ -570,13 +567,13 @@ const T = {
   nav_apt:"The flat", nav_gallery:"Photos & video", nav_location:"Location", nav_contact:"Contact", cta_book:"Book",
   hero_eyebrow:"Penha de França · Lisbon", hero_title:"A cosy one-bedroom flat facing Praça Paiva Couceiro",
   hero_lead:"An entire, fully furnished flat with lots of natural light, for short and mid-term stays in central Lisbon. Check the free dates and send your booking request right here.",
-  fact_type:"1 double bedroom", fact_floor:"Ground floor", fact_min:"AC/Heater"
+  fact_type:"1 double bedroom", fact_floor:"Ground floor", fact_ac:"AC/Heater",
   hero_cta_dates:"See available dates", hand_note:"Ready to move in", alt_living:"Living room with a sage-green wall, copper pendant lights and a wooden bookcase",
   apt_eyebrow:"The flat", apt_title:"45 m² made for living Lisbon like a local",
   apt_p1:"Right in Penha de França, overlooking Praça Paiva Couceiro, this one-bedroom flat is a calm base in one of Lisbon's most genuine neighbourhoods. Three windows fill it with daylight from morning to evening.",
   apt_p2:"The double bedroom has a wardrobe and its own window. The living room, with two windows facing the square, has a sofa bed for an extra guest and an extendable desk for a full day of remote work.",
   apt_p3:"The kitchen is fully equipped with an oven, microwave, dishwasher and fridge. There is a washing machine, air conditioning with heating, a smart TV and fast Wi-Fi. Just bring your suitcase.",
-  am_bed:"Double bedroom with wardrobe", am_light:"Lots of natural light", am_floor:"Ground floor, no stairs",
+  am_title:"What the flat offers", am_bed:"Double bedroom with wardrobe", am_light:"Lots of natural light", am_floor:"Ground floor, no stairs",
   am_sofa:"Sofa bed in the living room", am_desk:"Extendable desk for working", am_ac:"Air conditioning and heating",
   am_kitchen:"Oven, microwave and fridge", am_dish:"Dishwasher", am_wash:"Washing machine",
   am_tv:"Smart TV", am_wifi:"High-speed Wi-Fi",
@@ -592,7 +589,7 @@ const T = {
   bk_eyebrow:"Online booking", bk_title:"Choose your dates", bk_lead:"This calendar is synced with our Uniplaces and Spotahome listings. Click your check-in day, then your check-out day.",
   prev:"Previous month", next:"Next month", clear:"Clear", lg_free:"Available", lg_booked:"Booked", lg_sel:"Your stay",
   sync_live:"Synced with Uniplaces and Spotahome · updated {t}", sync_off:"Availability as published on our listings · we confirm by message",
-  from:"From"
+  from:"From", per_month:"/ month",
   s_pick_in:"Select your check-in day on the calendar.", s_pick_out:"Now select your check-out day.",
   s_in:"Check-in", s_out:"Check-out", s_nights:"Nights", s_est:"Estimate",
   s_min:"The minimum stay is {n} nights.", s_conflict:"Some days between your dates are already booked.",
@@ -612,16 +609,16 @@ const T = {
   nav_apt:"El apartamento", nav_gallery:"Fotos y vídeo", nav_location:"Ubicación", nav_contact:"Contacto", cta_book:"Reservar",
   hero_eyebrow:"Penha de França · Lisboa", hero_title:"Un acogedor apartamento de un dormitorio frente a la Praça Paiva Couceiro",
   hero_lead:"Apartamento entero y totalmente amueblado, con mucha luz natural, para estancias cortas y medias en el centro de Lisboa. Consulta las fechas libres y envía tu solicitud de reserva aquí.",
-  fact_type:"1 dormitorio doble", fact_floor:"Planta baja", fact_min:"Mínimo 1 mes", fact_bills:"Gastos incluidos",
+  fact_type:"1 dormitorio doble", fact_floor:"Planta baja", fact_ac:"Aire acondicionado / calefacción",
   hero_cta_dates:"Ver fechas disponibles", hand_note:"Listo para entrar a vivir", alt_living:"Salón con pared verde salvia, lámparas de cobre y estantería de madera",
   apt_eyebrow:"El apartamento", apt_title:"45 m² pensados para vivir Lisboa como un local",
   apt_p1:"En plena Penha de França, con vistas a la Praça Paiva Couceiro, este apartamento es una base tranquila en uno de los barrios más auténticos de Lisboa. Tres ventanas lo llenan de luz durante todo el día.",
   apt_p2:"El dormitorio doble tiene armario y ventana propia. El salón, con dos ventanas que dan a la plaza, tiene sofá cama para un huésped más y un escritorio extensible para una jornada completa de teletrabajo.",
   apt_p3:"La cocina está totalmente equipada con horno, microondas, lavavajillas y frigorífico. Hay lavadora, aire acondicionado con calefacción, Smart TV y wifi rápido. Solo tienes que traer la maleta.",
-  am_title:"Todo incluido", am_bed:"Dormitorio doble con armario", am_light:"Mucha luz natural", am_floor:"Planta baja, sin escaleras",
+  am_title:"Lo que ofrece el apartamento", am_bed:"Dormitorio doble con armario", am_light:"Mucha luz natural", am_floor:"Planta baja, sin escaleras",
   am_sofa:"Sofá cama en el salón", am_desk:"Escritorio extensible para trabajar", am_ac:"Aire acondicionado y calefacción",
   am_kitchen:"Horno, microondas y frigorífico", am_dish:"Lavavajillas", am_wash:"Lavadora",
-  am_tv:"Smart TV", am_wifi:"Wifi de alta velocidad", am_bills:"Agua, luz e internet incluidos",
+  am_tv:"Smart TV", am_wifi:"Wifi de alta velocidad",
   gal_eyebrow:"Galería", gal_title:"Echa un vistazo a cada rincón",
   vid_title:"Visita en vídeo", vid_sub:"Recorre el apartamento antes de reservar.",
   vid_missing:"Los vídeos del apartamento están en nuestro Instagram.", vid_btn:"Ver vídeos en Instagram",
@@ -634,7 +631,7 @@ const T = {
   bk_eyebrow:"Reservas online", bk_title:"Elige tus fechas", bk_lead:"El calendario está sincronizado con los anuncios de Uniplaces y Spotahome. Pulsa el día de entrada y luego el de salida.",
   prev:"Mes anterior", next:"Mes siguiente", clear:"Borrar", lg_free:"Disponible", lg_booked:"Ocupado", lg_sel:"Tu estancia",
   sync_live:"Sincronizado con Uniplaces y Spotahome · actualizado {t}", sync_off:"Disponibilidad publicada en los anuncios · confirmamos por mensaje",
-  from:"Desde", per_month:"/ mes, gastos incluidos",
+  from:"Desde", per_month:"/ mes",
   s_pick_in:"Selecciona el día de entrada en el calendario.", s_pick_out:"Ahora selecciona el día de salida.",
   s_in:"Entrada", s_out:"Salida", s_nights:"Noches", s_est:"Estimación",
   s_min:"La estancia mínima es de {n} noches.", s_conflict:"Hay días ocupados entre las fechas elegidas.",
@@ -654,16 +651,16 @@ const T = {
   nav_apt:"L'appartement", nav_gallery:"Photos et vidéo", nav_location:"Quartier", nav_contact:"Contact", cta_book:"Réserver",
   hero_eyebrow:"Penha de França · Lisbonne", hero_title:"Un T2 chaleureux face à la Praça Paiva Couceiro",
   hero_lead:"Appartement entier et entièrement meublé, très lumineux, pour des séjours de courte et moyenne durée au centre de Lisbonne. Consultez les dates libres et envoyez votre demande de réservation ici.",
-  fact_type:"1 chambre double", fact_floor:"Rez-de-chaussée", fact_min:"1 mois minimum", fact_bills:"Charges comprises",
+  fact_type:"1 chambre double", fact_floor:"Rez-de-chaussée", fact_ac:"Climatisation / chauffage",
   hero_cta_dates:"Voir les disponibilités", hand_note:"Prêt à vivre", alt_living:"Séjour avec mur vert sauge, suspensions en cuivre et bibliothèque en bois",
   apt_eyebrow:"L'appartement", apt_title:"45 m² pour vivre Lisbonne comme un habitant",
   apt_p1:"Au cœur de Penha de França, avec vue sur la Praça Paiva Couceiro, cet appartement est un point de chute paisible dans l'un des quartiers les plus authentiques de Lisbonne. Trois fenêtres le baignent de lumière toute la journée.",
   apt_p2:"La chambre double dispose d'une armoire et de sa propre fenêtre. Le séjour, avec deux fenêtres donnant sur la place, offre un canapé-lit pour un invité supplémentaire et un bureau extensible pour une journée entière de télétravail.",
   apt_p3:"La cuisine est entièrement équipée : four, micro-ondes, lave-vaisselle et réfrigérateur. Lave-linge, climatisation réversible, Smart TV et Wi-Fi rapide complètent l'ensemble. Il ne reste qu'à poser la valise.",
-  am_title:"Tout est inclus", am_bed:"Chambre double avec armoire", am_light:"Très lumineux", am_floor:"Rez-de-chaussée, sans escalier",
+  am_title:"Ce que propose l'appartement", am_bed:"Chambre double avec armoire", am_light:"Très lumineux", am_floor:"Rez-de-chaussée, sans escalier",
   am_sofa:"Canapé-lit dans le séjour", am_desk:"Bureau extensible pour travailler", am_ac:"Climatisation et chauffage",
   am_kitchen:"Four, micro-ondes et réfrigérateur", am_dish:"Lave-vaisselle", am_wash:"Lave-linge",
-  am_tv:"Smart TV", am_wifi:"Wi-Fi haut débit", am_bills:"Eau, électricité et internet compris",
+  am_tv:"Smart TV", am_wifi:"Wi-Fi haut débit",
   gal_eyebrow:"Galerie", gal_title:"Faites le tour des pièces",
   vid_title:"Visite en vidéo", vid_sub:"Parcourez l'appartement avant de réserver.",
   vid_missing:"Les vidéos de l'appartement sont publiées sur notre Instagram.", vid_btn:"Voir les vidéos sur Instagram",
@@ -676,7 +673,7 @@ const T = {
   bk_eyebrow:"Réservation en ligne", bk_title:"Choisissez vos dates", bk_lead:"Le calendrier est synchronisé avec nos annonces Uniplaces et Spotahome. Cliquez sur le jour d'arrivée, puis sur le jour de départ.",
   prev:"Mois précédent", next:"Mois suivant", clear:"Effacer", lg_free:"Disponible", lg_booked:"Réservé", lg_sel:"Votre séjour",
   sync_live:"Synchronisé avec Uniplaces et Spotahome · mis à jour {t}", sync_off:"Disponibilités publiées sur nos annonces · confirmation par message",
-  from:"À partir de", per_month:"/ mois, charges comprises",
+  from:"À partir de", per_month:"/ mois",
   s_pick_in:"Sélectionnez votre jour d'arrivée sur le calendrier.", s_pick_out:"Sélectionnez maintenant votre jour de départ.",
   s_in:"Arrivée", s_out:"Départ", s_nights:"Nuits", s_est:"Estimation",
   s_min:"Le séjour minimum est de {n} nuits.", s_conflict:"Certains jours entre vos dates sont déjà réservés.",
